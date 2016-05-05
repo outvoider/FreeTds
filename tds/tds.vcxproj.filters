@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="login.c" />
+    <ClCompile Include="mem.c" />
+    <ClCompile Include="read.c" />
+    <ClCompile Include="token.c" />
+    <ClCompile Include="util.c" />
+    <ClCompile Include="config.c" />
+    <ClCompile Include="convert.c" />
+    <ClCompile Include="iconv.c" />
+    <ClCompile Include="numeric.c" />
+    <ClCompile Include="query.c" />
+    <ClCompile Include="write.c" />
+    <ClCompile Include="locale.c" />
+    <ClCompile Include="threadsafe.c" />
+    <ClCompile Include="vstrbuild.c" />
+    <ClCompile Include="data.c" />
+    <ClCompile Include="getmac.c" />
+    <ClCompile Include="net.c" />
+    <ClCompile Include="tdsstring.c" />
+    <ClCompile Include="tls.c" />
+    <ClCompile Include="log.c" />
+    <ClCompile Include="tds_checks.c" />
+    <ClCompile Include="bulk.c" />
+    <ClCompile Include="packet.c" />
+    <ClCompile Include="random.c" />
+    <ClCompile Include="stream.c" />
+    <ClCompile Include="sec_negotiate.c" />
+    <ClCompile Include="sspi.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sec_negotiate_gnutls.h" />
+    <ClInclude Include="sec_negotiate_openssl.h" />
+    <ClInclude Include="encodings.h" />
+    <ClInclude Include="num_limits.h" />
+    <ClInclude Include="tds_types.h" />
+    <ClInclude Include="tds_willconvert.h" />
+  </ItemGroup>
+</Project>

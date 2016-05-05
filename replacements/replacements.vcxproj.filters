@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="getaddrinfo.c" />
+    <ClCompile Include="getpassarg.c" />
+    <ClCompile Include="gettimeofday.c" />
+    <ClCompile Include="iconv.c" />
+    <ClCompile Include="poll.c" />
+    <ClCompile Include="sleep.c" />
+    <ClCompile Include="socketpair.c" />
+    <ClCompile Include="tds_cond.c" />
+    <ClCompile Include="win_mutex.c" />
+    <ClCompile Include="asprintf.c" />
+    <ClCompile Include="strlcpy.c" />
+    <ClCompile Include="strtok_r.c" />
+    <ClCompile Include="vasprintf.c" />
+    <ClCompile Include="getopt.c" />
+    <ClCompile Include="readpassphrase.c" />
+  </ItemGroup>
+</Project>

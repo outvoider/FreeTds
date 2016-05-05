@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bcp.c" />
+    <ClCompile Include="connectparams.c" />
+    <ClCompile Include="convert_tds2sql.c" />
+    <ClCompile Include="descriptor.c" />
+    <ClCompile Include="error.c" />
+    <ClCompile Include="native.c" />
+    <ClCompile Include="odbc.c" />
+    <ClCompile Include="odbc_checks.c" />
+    <ClCompile Include="odbc_data.c" />
+    <ClCompile Include="odbc_util.c" />
+    <ClCompile Include="prepare_query.c" />
+    <ClCompile Include="sql2tds.c" />
+    <ClCompile Include="sqlwchar.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="error_export.h" />
+    <ClInclude Include="odbc_export.h" />
+    <ClInclude Include="sqlwparams.h" />
+  </ItemGroup>
+</Project>
