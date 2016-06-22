@@ -112,8 +112,12 @@ pool_packet_read(TDSSOCKET *tds)
 		assert(packet_len <= tds->recv_packet->capacity);
 		assert(tds->in_len < tds->recv_packet->capacity);
 
-		//readed = read(tds_get_s(tds), &tds->in_buf[tds->in_len], packet_len - tds->in_len);
+#if defined(_WIN32) || defined(_WIN64)
 		readed = recv(tds_get_s(tds), &tds->in_buf[tds->in_len], packet_len - tds->in_len, 0);
+#else
+		readed = read(tds_get_s(tds), &tds->in_buf[tds->in_len], packet_len - tds->in_len);
+#endif
+
 		tdsdump_log(TDS_DBG_INFO1, "readed %d\n", readed);
 
 		/* socket closed */
@@ -148,6 +152,16 @@ pool_write(TDS_SYS_SOCKET sock, const void *buf, size_t len)
 	while (len) {
 		ret = WRITESOCKET(sock, p, len);
 		if (ret <= 0) {
+
+#if defined(_WIN32) || defined(_WIN64)
+			int code = WSAGetLastError();
+			
+			if (code == WSAEWOULDBLOCK)
+			{
+				break;
+			}
+#endif
+
 			int err = errno;
 			if (TDSSOCK_WOULDBLOCK(err) || err == EINTR)
 				break;
